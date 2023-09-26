@@ -1,4 +1,6 @@
 .idea/
 .ipynb_checkpoints/
+build/
+*.spec
 *.txt
-*.py
+py.py
