@@ -28,8 +28,8 @@ while True:
     print('\n<Contributions>')
     print(f'TEAM 1:', end='')
     for contribution in contributions[:5]:
-        print(f' {contribution:.2f}', end='')
+        print(f' {contribution:.1f}', end='')
     print(f'\nTEAM 2:', end='')
     for contribution in contributions[5:]:
-        print(f' {contribution:.2f}', end='')
+        print(f' {contribution:.1f}', end='')
     input('\n> ')
