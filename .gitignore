@@ -4,4 +4,7 @@ build/
 dist/
 *.spec
 *.txt
+*.spec
+*.joblib
 py.py
+*.csv

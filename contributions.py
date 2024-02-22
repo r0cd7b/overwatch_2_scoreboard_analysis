@@ -4,9 +4,8 @@ import joblib
 import sklearn
 
 while True:
+    input('> ')
     scoreboard = pd.read_csv('scoreboard.csv')
-    print('<Scoreboard>')
-    print(scoreboard)
     death_max = joblib.load('max.joblib')
     scoreboard.loc[
         (scoreboard['E'] == 0) &
@@ -25,11 +24,8 @@ while True:
     contributions[tanks] *= 2 / contributions[tanks].sum()
     contributions[damages] *= 4 / contributions[damages].sum()
     contributions[supports] *= 4 / contributions[supports].sum()
-    print('\n<Contributions>')
-    print(f'TEAM 1:', end='')
     for contribution in contributions[:5]:
-        print(f' {contribution:.2f}', end='')
-    print(f'\nTEAM 2:', end='')
+        print(f'{contribution:.2f}')
+    print()
     for contribution in contributions[5:]:
-        print(f' {contribution:.2f}', end='')
-    input('\n> ')
+        print(f'{contribution:.2f}')
