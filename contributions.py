@@ -1,12 +1,15 @@
-# pyinstaller --onefile contributions.py
+# pyinstaller -F contributions.py
 try:
-    import sklearn
-    from numpy.core import multiarray
-
+    import warnings
     from joblib import load
     from pandas import read_csv
     import numpy as np
     from operator import itemgetter
+
+    warnings.simplefilter('ignore')
+
+    import sklearn
+    from numpy.core import multiarray
 
     max_d = load('max.joblib')
     scaler = load('scaler.joblib')
