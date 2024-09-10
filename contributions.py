@@ -24,6 +24,11 @@ try:
     teams = 'T1', 'T1', 'T1', 'T1', 'T1', 'T2', 'T2', 'T2', 'T2', 'T2'
     roles = 'T1', 'D1', 'D2', 'S1', 'S2', 'T1', 'D1', 'D2', 'S1', 'S2'
     while True:
+        print('Role: 1')
+        print('Open: 2')
+        print('Break: else')
+        input_ = input('> ')
+
         scoreboard = read_csv('scoreboard.csv')
         scoreboard.loc[
             (scoreboard['E'] == 0) &
@@ -36,11 +41,6 @@ try:
         ] = max_d
         scoreboard = scaler.transform(scoreboard)
         scoreboard[:, 2] = 1 - scoreboard[:, 2]
-
-        print('Role: 1')
-        print('Open: 2')
-        print('Break: else')
-        input_ = input('> ')
         if input_ == '1':
             contributions = (scoreboard * role_).sum(1)
             contributions[tank] *= len_tank / contributions[tank].sum()
