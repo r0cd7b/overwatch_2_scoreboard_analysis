@@ -4,11 +4,10 @@ try:
     from joblib import load
     from pandas import read_csv
     from operator import itemgetter
+    import numpy.core.multiarray
+    import sklearn
 
     warnings.simplefilter('ignore')
-
-    import sklearn
-    from numpy.core import multiarray
 
     death_peak = load('max.joblib')
     scaler = load('scaler.joblib')
