@@ -6,5 +6,5 @@ dist/
 *.exe
 *.spec
 *.txt
-py.py
+temp.py
 *.png
