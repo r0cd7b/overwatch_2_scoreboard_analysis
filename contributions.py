@@ -1,4 +1,5 @@
-# pyinstaller -F contributions.py
+# pip install joblib pandas scikit-learn pyinstaller
+# pyinstaller --onefile contributions.py
 try:
     import warnings
     from joblib import load
@@ -36,7 +37,7 @@ try:
             for ranking, (index, contribution) in enumerate(sorted_, 1):
                 contributions[index] = contribution, ranking
             for index, (contribution, ranking) in contributions.items():
-                print(f'{index:02d}: ({contribution:.2f}, {ranking:02d})')
+                print(f'{index:02d}: ({contribution:.1f}, {ranking:02d})')
             print()
         else:
             break
